@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
 class Chat extends Component {
-    render() {
-        return (
-            <div className="Sidebar">
-                Chat
+	render() {
+		return (
+			<div className="Sidebar">
+				Chat
             </div>
-        )
-    }
+		)
+	}
 }
 
 export default Chat
