@@ -1,24 +1,25 @@
 import React from 'react'
 
-const UserInfo = (props) => {
+import Avatar from './Avatar'
+import SignOutButton from './SignOutButton'
+
+const UserInfo = ({ user }) => {
   return (
     <div
         className="UserInfo"
         style={styles.userInfo}
       >
-        <div className="Avatar"></div>
+        <Avatar user={user} />
         <div style={styles.user}>
-          {props.user.displayName}
+          {user.displayName}
         </div>
-        <a href="#">
-          <i className="fas fa-sign-out-alt"></i>
-        </a>
+        <SignOutButton />
       </div>
   )
 }
 
-const styles = {
 
+const styles = {
   userInfo: {
     padding: '0 1rem',
     marginBottom: '1rem',
@@ -30,6 +31,5 @@ const styles = {
     flex: '1',
   },
 }
-
 
 export default UserInfo
