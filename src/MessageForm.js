@@ -18,12 +18,12 @@ class MessageForm extends Component {
   render() {
     return (
       <form 
-        styles={styles.messageForm}
+        style={styles.messageForm}
         className="MessageForm"
         onSubmit={this.handleSubmit}
       >
         <input
-          styles={styles.input}
+          style={styles.input}
           autoFocus
           required
           type="text"
