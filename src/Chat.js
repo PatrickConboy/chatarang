@@ -33,15 +33,38 @@ class Chat extends Component {
 		}
 	}
 
+	addMessage = (body) => {
+		const messages = [...this.state.messages]
+		const user = {
+			uid: 'sdfsdf',
+			displayName: 'Patches',
+			email: 'rispir45@gmail.com'
+		}
+
+		messages.push({
+			id: `${user.uid}-${Date.now()}`,
+			user,
+			body,
+		})
+
+		this.setState({ messages })
+	}
+
 	render() {
 		return (
-			<div className="Sidebar">
+			<div className="Sidebar" style={styles}>
 				<ChatHeader />
 				<MessageList messages={this.state.messages} />
-				<MessageForm />
+				<MessageForm addMessage={this.addMessage} />
 			</div>
 		)
 	}
+}
+
+const styles = { 
+	flex: '1',
+	display: 'flex',
+	flexDirection: 'column',
 }
 
 export default Chat
