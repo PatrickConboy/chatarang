@@ -3,7 +3,9 @@ import React from 'react'
 const Message = (props) => {
   return (
     <div className="Message" style={styles.message}>
-      {props.message.user.displayName}: {props.message.body}
+      <div style={styles.details}>
+        {props.message.user.displayName}: {props.message.body}
+      </div>
     </div>
   )
 }
