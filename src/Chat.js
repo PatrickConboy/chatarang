@@ -52,7 +52,9 @@ class Chat extends Component {
 
 	render() {
 		return (
-			<div className="Sidebar" style={styles}>
+			<div className="Sidebar" 
+				style={styles}
+			>
 				<ChatHeader />
 				<MessageList messages={this.state.messages} />
 				<MessageForm addMessage={this.addMessage} />
