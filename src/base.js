@@ -1,5 +1,5 @@
 import firebase from 'firebase/app'
-import Rebase from 're-base
+import Rebase from 're-base'
 import database from 'firebase/database'
 
 // Initialize Firebase
@@ -14,3 +14,5 @@ const config = {
 const app = firebase.initializeApp(config);
 const db = firebase.database(app)
 const base = Rebase.createClass(db)
+
+export default Rebase.createClass(db)
