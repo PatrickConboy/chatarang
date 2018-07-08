@@ -13,6 +13,5 @@ const config = {
 };
 const app = firebase.initializeApp(config);
 const db = firebase.database(app)
-const base = Rebase.createClass(db)
 
 export default Rebase.createClass(db)
