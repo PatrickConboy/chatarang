@@ -39,7 +39,7 @@ class Chat extends Component {
   render() {
     return (
       <div className="Chat" style={styles}>
-        <ChatHeader />
+        <ChatHeader room={this.props.room} />
         <MessageList
           messages={this.state.messages}
         />
