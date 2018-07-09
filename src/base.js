@@ -1,6 +1,7 @@
 import firebase from 'firebase/app'
 import Rebase from 're-base'
-import database from 'firebase/database'
+import 'firebase/database'
+import 'firebase/auth'
 
 // Initialize Firebase
 const config = {
@@ -11,7 +12,13 @@ const config = {
   storageBucket: "",
   messagingSenderId: "868857127017"
 };
-const app = firebase.initializeApp(config);
-const db = firebase.database(app)
+const app = firebase.initializeApp(config)
 
-export default Rebase.createClass(db)
+// Configure authentication
+export const googleProvider = new firebase.auth.GoogleAuthProvider()
+export const auth = firebase.auth()
+
+// Configure database and Rebase
+const db = firebase.database(app)
+const base = Rebase.createClass(db)
+export default base
