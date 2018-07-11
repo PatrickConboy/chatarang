@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://chatarang-5f8df.firebaseapp.com",
-
   "dependencies": {
     "aphrodite": "^2.2.2",
     "firebase": "^5.2.0",
+    "moment": "^2.22.2",
     "re-base": "^3.2.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
